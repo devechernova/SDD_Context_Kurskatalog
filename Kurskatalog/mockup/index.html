@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurskatalog – Weiterbildung für IT, Daten &amp; Karriere</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Kurs<span>katalog</span></a>
+      <nav class="main-nav">
+        <a href="#">Startseite</a>
+        <a href="#" class="active">Kurskatalog</a>
+        <a href="#">Beratung</a>
+        <a href="#">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Wir bieten 14 Kurse an</h1>
+      <div class="accent-dots" aria-hidden="true">
+        <span class="dot dot-orange"></span>
+        <span class="dot dot-pink"></span>
+        <span class="dot dot-olive"></span>
+        <span class="dot dot-blue"></span>
+      </div>
+      <p class="hero-text">
+        Von Programmierung über Datenanalyse bis Projektmanagement. Such nach einem Thema,
+        das dich interessiert, oder stöber einfach durch die Liste – jeder Kurs führt zu
+        seiner ausführlichen Beschreibung.
+      </p>
+      <div class="search-bar">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+          <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input type="text" placeholder="Thema, Titel oder Stichwort – z. B. Power BI" aria-label="Kurse durchsuchen">
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog">
+    <div class="container">
+      <h2>Aus dem Kursangebot</h2>
+
+      <!-- Reine CSS-Filterung über versteckte Radiobuttons -->
+      <input type="radio" name="filter" id="filter-all" class="filter-input" checked>
+      <input type="radio" name="filter" id="filter-programmierung" class="filter-input">
+      <input type="radio" name="filter" id="filter-daten" class="filter-input">
+      <input type="radio" name="filter" id="filter-projekt" class="filter-input">
+      <input type="radio" name="filter" id="filter-agile" class="filter-input">
+      <input type="radio" name="filter" id="filter-business" class="filter-input">
+      <input type="radio" name="filter" id="filter-security" class="filter-input">
+      <input type="radio" name="filter" id="filter-karriere" class="filter-input">
+
+      <div class="filter-bar">
+        <label for="filter-all" class="chip">Alle Kurse</label>
+        <label for="filter-programmierung" class="chip">Programmierung</label>
+        <label for="filter-daten" class="chip">Daten &amp; BI</label>
+        <label for="filter-projekt" class="chip">Projektmanagement</label>
+        <label for="filter-agile" class="chip">Agile Methoden</label>
+        <label for="filter-business" class="chip">Business Analyse</label>
+        <label for="filter-security" class="chip">IT-Security</label>
+        <label for="filter-karriere" class="chip">Karriere &amp; Coaching</label>
+      </div>
+
+      <div class="carousel">
+      <div class="carousel-track">
+
+        <article class="course-card cat-programmierung">
+          <div class="card-image"><img src="images/mann-it-lernen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-programmierung">Programmierung</span>
+            <h3>Grundlagen der Programmierung</h3>
+            <p>Einstieg in Programmierlogik, Datenstrukturen und erste eigene Anwendungen – ideal für den Quereinstieg in die IT.</p>
+            <div class="meta"><span>Online</span><span>8 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-programmierung">
+          <div class="card-image"><img src="images/frau-it-lernen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-programmierung">Programmierung</span>
+            <h3>Apps und Spiele entwickeln</h3>
+            <p>Von der ersten Codezeile bis zur fertigen Anwendung: Programmierlogik, Aufbau und Gestaltung praxisnah verbunden.</p>
+            <div class="meta"><span>Online</span><span>10 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-daten">
+          <div class="card-image"><img src="images/power-bi-kurs.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-daten">Daten &amp; BI</span>
+            <h3>Business Intelligence mit Power BI</h3>
+            <p>Kennzahlen aufbereiten, Berichte gestalten und Daten so visualisieren, dass Entscheidungen nachvollziehbar werden.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-daten">
+          <div class="card-image"><img src="images/maenner-datenbank-umzug.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-daten">Daten &amp; BI</span>
+            <h3>Big Data Analytics</h3>
+            <p>Von der Speicherung großer Datenmengen bis zur Auswertung mit modernen Analysewerkzeugen.</p>
+            <div class="meta"><span>Präsenz</span><span>12 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-projekt">
+          <div class="card-image"><img src="images/projektmanagement.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-projekt">Projektmanagement</span>
+            <h3>Klassisches Projektmanagement</h3>
+            <p>Projekte strukturiert planen, Ressourcen steuern und Ergebnisse zuverlässig liefern.</p>
+            <div class="meta"><span>Online</span><span>8 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-projekt">
+          <div class="card-image"><img src="images/projekt-planen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-projekt">Projektmanagement</span>
+            <h3>Agiles Projektmanagement</h3>
+            <p>Vorhaben in iterativen Schritten planen und laufend an neue Anforderungen anpassen.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-agile">
+          <div class="card-image"><img src="images/mann-zeigt-software.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-agile">Agile Methoden</span>
+            <h3>Scrum für Teams</h3>
+            <p>Rollen, Events und Artefakte des Scrum-Rahmenwerks in der täglichen Zusammenarbeit anwenden.</p>
+            <div class="meta"><span>Präsenz</span><span>4 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-agile">
+          <div class="card-image"><img src="images/frau-baut-erm.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-agile">Agile Methoden</span>
+            <h3>Agile Organisationsentwicklung</h3>
+            <p>Strukturen, Rollen und Entscheidungswege so weiterentwickeln, dass agiles Arbeiten im Unternehmen wirkt.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-business">
+          <div class="card-image"><img src="images/frau-baut-erm.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-business">Business Analyse</span>
+            <h3>Business Analyst Grundlagen</h3>
+            <p>Anforderungen erheben, Prozesse untersuchen und Daten für betriebliche Entscheidungen aufbereiten.</p>
+            <div class="meta"><span>Online</span><span>10 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-business">
+          <div class="card-image"><img src="images/maenner-datenbank-umzug.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-business">Business Analyse</span>
+            <h3>Anforderungsmanagement und Dokumentation</h3>
+            <p>Fachliche Anforderungen präzise erfassen und nachvollziehbar dokumentieren.</p>
+            <div class="meta"><span>Präsenz</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-security">
+          <div class="card-image"><img src="images/unterricht-frau.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-security">IT-Security</span>
+            <h3>Cloud Security</h3>
+            <p>Zuständigkeiten zwischen Anbieter und Kunde verstehen und Cloud-Umgebungen wirksam absichern.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-security">
+          <div class="card-image"><img src="images/mann-it-lernen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-security">IT-Security</span>
+            <h3>IT-Sicherheit im Unternehmen</h3>
+            <p>Bedrohungen erkennen, Schutzmaßnahmen umsetzen und Sicherheitsrichtlinien im Alltag verankern.</p>
+            <div class="meta"><span>Präsenz</span><span>8 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-karriere">
+          <div class="card-image"><img src="images/frauen-lernen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-karriere">Karriere &amp; Coaching</span>
+            <h3>Bewerbungsberatung und Coaching</h3>
+            <p>Berufsziel, Bewerbungsunterlagen und persönliche Stärken gezielt aufeinander abstimmen.</p>
+            <div class="meta"><span>Online</span><span>4 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-karriere">
+          <div class="card-image"><img src="images/unterricht-frau.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-karriere">Karriere &amp; Coaching</span>
+            <h3>Coaching für den beruflichen Neustart</h3>
+            <p>Vorhandene Qualifikationen für eine berufliche Neuorientierung nutzbar machen.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Duplikat der Karten für die nahtlose Endlosschleife -->
+        <article class="course-card cat-programmierung" aria-hidden="true">
+          <div class="card-image"><img src="images/mann-it-lernen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-programmierung">Programmierung</span>
+            <h3>Grundlagen der Programmierung</h3>
+            <p>Einstieg in Programmierlogik, Datenstrukturen und erste eigene Anwendungen – ideal für den Quereinstieg in die IT.</p>
+            <div class="meta"><span>Online</span><span>8 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-programmierung" aria-hidden="true">
+          <div class="card-image"><img src="images/frau-it-lernen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-programmierung">Programmierung</span>
+            <h3>Apps und Spiele entwickeln</h3>
+            <p>Von der ersten Codezeile bis zur fertigen Anwendung: Programmierlogik, Aufbau und Gestaltung praxisnah verbunden.</p>
+            <div class="meta"><span>Online</span><span>10 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-daten" aria-hidden="true">
+          <div class="card-image"><img src="images/power-bi-kurs.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-daten">Daten &amp; BI</span>
+            <h3>Business Intelligence mit Power BI</h3>
+            <p>Kennzahlen aufbereiten, Berichte gestalten und Daten so visualisieren, dass Entscheidungen nachvollziehbar werden.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-daten" aria-hidden="true">
+          <div class="card-image"><img src="images/maenner-datenbank-umzug.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-daten">Daten &amp; BI</span>
+            <h3>Big Data Analytics</h3>
+            <p>Von der Speicherung großer Datenmengen bis zur Auswertung mit modernen Analysewerkzeugen.</p>
+            <div class="meta"><span>Präsenz</span><span>12 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-projekt" aria-hidden="true">
+          <div class="card-image"><img src="images/projektmanagement.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-projekt">Projektmanagement</span>
+            <h3>Klassisches Projektmanagement</h3>
+            <p>Projekte strukturiert planen, Ressourcen steuern und Ergebnisse zuverlässig liefern.</p>
+            <div class="meta"><span>Online</span><span>8 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-projekt" aria-hidden="true">
+          <div class="card-image"><img src="images/projekt-planen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-projekt">Projektmanagement</span>
+            <h3>Agiles Projektmanagement</h3>
+            <p>Vorhaben in iterativen Schritten planen und laufend an neue Anforderungen anpassen.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-agile" aria-hidden="true">
+          <div class="card-image"><img src="images/mann-zeigt-software.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-agile">Agile Methoden</span>
+            <h3>Scrum für Teams</h3>
+            <p>Rollen, Events und Artefakte des Scrum-Rahmenwerks in der täglichen Zusammenarbeit anwenden.</p>
+            <div class="meta"><span>Präsenz</span><span>4 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-agile" aria-hidden="true">
+          <div class="card-image"><img src="images/frau-baut-erm.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-agile">Agile Methoden</span>
+            <h3>Agile Organisationsentwicklung</h3>
+            <p>Strukturen, Rollen und Entscheidungswege so weiterentwickeln, dass agiles Arbeiten im Unternehmen wirkt.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-business" aria-hidden="true">
+          <div class="card-image"><img src="images/frau-baut-erm.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-business">Business Analyse</span>
+            <h3>Business Analyst Grundlagen</h3>
+            <p>Anforderungen erheben, Prozesse untersuchen und Daten für betriebliche Entscheidungen aufbereiten.</p>
+            <div class="meta"><span>Online</span><span>10 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-business" aria-hidden="true">
+          <div class="card-image"><img src="images/maenner-datenbank-umzug.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-business">Business Analyse</span>
+            <h3>Anforderungsmanagement und Dokumentation</h3>
+            <p>Fachliche Anforderungen präzise erfassen und nachvollziehbar dokumentieren.</p>
+            <div class="meta"><span>Präsenz</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-security" aria-hidden="true">
+          <div class="card-image"><img src="images/unterricht-frau.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-security">IT-Security</span>
+            <h3>Cloud Security</h3>
+            <p>Zuständigkeiten zwischen Anbieter und Kunde verstehen und Cloud-Umgebungen wirksam absichern.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-security" aria-hidden="true">
+          <div class="card-image"><img src="images/mann-it-lernen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-security">IT-Security</span>
+            <h3>IT-Sicherheit im Unternehmen</h3>
+            <p>Bedrohungen erkennen, Schutzmaßnahmen umsetzen und Sicherheitsrichtlinien im Alltag verankern.</p>
+            <div class="meta"><span>Präsenz</span><span>8 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-karriere" aria-hidden="true">
+          <div class="card-image"><img src="images/frauen-lernen.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-karriere">Karriere &amp; Coaching</span>
+            <h3>Bewerbungsberatung und Coaching</h3>
+            <p>Berufsziel, Bewerbungsunterlagen und persönliche Stärken gezielt aufeinander abstimmen.</p>
+            <div class="meta"><span>Online</span><span>4 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="course-card cat-karriere" aria-hidden="true">
+          <div class="card-image"><img src="images/unterricht-frau.jpg" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <span class="badge cat-karriere">Karriere &amp; Coaching</span>
+            <h3>Coaching für den beruflichen Neustart</h3>
+            <p>Vorhandene Qualifikationen für eine berufliche Neuorientierung nutzbar machen.</p>
+            <div class="meta"><span>Online</span><span>6 Wochen</span></div>
+            <a href="#" class="card-link" tabindex="-1">Zum Kurs
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="#">Kurs<span>katalog</span></a>
+        <p>Weiterbildung für IT, Business und Karriere.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Angebot</h4>
+        <a href="#">Programmierung</a>
+        <a href="#">Daten &amp; BI</a>
+        <a href="#">Projektmanagement</a>
+      </div>
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <a href="#">Über uns</a>
+        <a href="#">Beratung</a>
+        <a href="#">Kontakt</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Kurskatalog. Alle Rechte vorbehalten.</p>
+  </footer>
+
+</body>
+</html>

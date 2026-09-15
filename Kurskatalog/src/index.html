@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurskatalog</title>
+    <meta
+      name="description"
+      content="Kurskatalog für Weiterbildung, IT, Daten und Karriere."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#" aria-label="Kurskatalog Startseite">Kurs<span>katalog</span></a>
+
+        <nav class="main-nav" aria-label="Hauptnavigation">
+          <a href="#">Startseite</a>
+          <a href="#" class="active">Kurskatalog</a>
+          <a href="#">Beratung</a>
+          <a href="#">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Wir bieten 14 Kurse an</h1>
+
+          <div class="accent-dots" aria-hidden="true">
+            <span class="dot dot-orange"></span>
+            <span class="dot dot-pink"></span>
+            <span class="dot dot-olive"></span>
+            <span class="dot dot-blue"></span>
+          </div>
+
+          <p class="hero-text">
+            Von Programmierung über Datenanalyse bis Projektmanagement. Suche nach einem Thema,
+            das dich interessiert, oder stöbere einfach durch die Liste – jeder Kurs führt zu seiner
+            ausführlichen Beschreibung.
+          </p>
+
+          <div class="search-bar" role="search">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+              <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <input type="search" placeholder="Thema, Titel oder Stichwort – z. B. Power BI" aria-label="Kurse durchsuchen" />
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog" aria-labelledby="catalog-title">
+        <div class="container">
+          <h2 id="catalog-title">Aus dem Kursangebot</h2>
+
+          <div class="filter-bar" aria-label="Kursfilter">
+            <button class="chip is-active" type="button" data-filter="all">Alle Kurse</button>
+            <button class="chip" type="button" data-filter="programmierung">Programmierung</button>
+            <button class="chip" type="button" data-filter="daten">Daten &amp; BI</button>
+            <button class="chip" type="button" data-filter="projekt">Projektmanagement</button>
+            <button class="chip" type="button" data-filter="agile">Agile Methoden</button>
+            <button class="chip" type="button" data-filter="business">Business Analyse</button>
+            <button class="chip" type="button" data-filter="security">IT-Security</button>
+            <button class="chip" type="button" data-filter="karriere">Karriere &amp; Coaching</button>
+          </div>
+
+          <div id="course-list" class="course-grid" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <a class="logo" href="#">Kurs<span>katalog</span></a>
+            <p>Weiterbildung für IT, Daten, Projektarbeit und beruflichen Wandel.</p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Unternehmen</h4>
+            <a href="#">Über uns</a>
+            <a href="#">Kurse</a>
+            <a href="#">Kontakt</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Mehr</h4>
+            <a href="#">Beratung</a>
+            <a href="#">FAQ</a>
+            <a href="#">Newsletter</a>
+          </div>
+        </div>
+
+        <p class="copyright">© 2026 Kurskatalog</p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
