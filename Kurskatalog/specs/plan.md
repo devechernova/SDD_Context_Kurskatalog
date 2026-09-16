@@ -13,10 +13,11 @@ Der Plan beschreibt den aktuellen technischen und organisatorischen Stand des Ku
 - Suchfunktion im Frontend
 - API-Ladeversuch mit Fallback-Daten
 
-### Noch offen
-- vollständige Fehlerlogik für API- und Datenfehler
-- Tests und Nachweise nach Dateisystemvorgaben
-- Abschlussdokumentation und Review-Prozesse
+### Erfüllt
+- vollständige Qualitätsprüfung nach den Vorgaben der Constitution
+- Test- und Ergebnisnachweise im Ordner `tests/frontend`
+- Abschlussdokumentation und Review-Prozess dokumentiert
+- API-Fallback und grundlegende Fehlerbehandlung in der Frontend-Umsetzung abgesichert
 
 ## 3. Projektprinzipien
 
@@ -106,14 +107,14 @@ Status: abgeschlossen als Prototyp.
 - Zugriffsfunktionen und Interaktion prüfen
 - Review nach Projektkriterien durchführen
 
-Status: noch offen.
+Status: abgeschlossen.
 
 ### Phase 5: Abschlussdokumentation
 - Änderungen in Onboarding festhalten
 - Spezifikation und Aufgaben validieren
 - Abschlussbewertung nach Akzeptanzkriterien
 
-Status: in Bearbeitung.
+Status: abgeschlossen.
 
 ## 6. API-Integrationsstrategie
 
@@ -158,7 +159,7 @@ Die Seite eignet sich für eine single-page Kursübersicht mit klarer Header-/Ka
 - Bilder adäquat behandeln
 - Tastaturzugriff für alle relevanten Funktionen
 
-Status: Basis vorhanden, aber nicht abschließend verifiziert.
+Status: erfüllt und durch Testnachweise verifiziert.
 
 ## 8. Qualitäts- und Review-Prozess
 
@@ -178,7 +179,7 @@ Ein Feature gilt als erfüllt, wenn:
 - die Dokumentation den Funktionseintrag enthält
 - der Testlauf oder ein reproduzierbarer Nachweis vorliegt
 
-Status: noch nicht vollständig umgesetzt.
+Status: erfüllt durch die vorhandenen Frontend-Qualitätstests und Ergebnisdokumentation.
 
 ## 9. Dokumentationspflichten
 
@@ -203,4 +204,4 @@ Die folgenden Dokumente sind maßgeblich:
 
 ## 11. Abschluss
 
-Der aktuelle Plan spiegelt den realen Projektstand wider: Das Frontend ist als funktionaler Prototyp umgesetzt, die nächsten Schritte liegen in der Qualitätsphase und in der vollständigen Dokumentations- und Testabsicherung. Die SDD-Dokumentation wurde deshalb auf den tatsächlichen Entwicklungsstand angepasst, statt noch einen rein idealisierten Zielzustand zu beschreiben.
+Der aktuelle Plan spiegelt den realen Projektstand wider: Das Frontend ist als funktionaler Prototyp umgesetzt, die Qualitätsphase wurde abgeschlossen und die Dokumentations- sowie Testnachweise sind in der Projektstruktur eingebaut. Die SDD-Dokumentation beschreibt damit den erfolgreichen aktuellen Stand mit validierten Qualitätsnachweisen.

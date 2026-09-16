@@ -192,6 +192,14 @@ input {
   color: #ffffff;
 }
 
+.chip:focus-visible,
+.search-bar input:focus-visible,
+.card-link:focus-visible,
+.main-nav a:focus-visible {
+  outline: 3px solid rgba(62, 142, 208, 0.35);
+  outline-offset: 3px;
+}
+
 .course-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

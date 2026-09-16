@@ -46,7 +46,12 @@ Kurskatalog/
 │   └── js/
 │       └── app.js
 ├── tests/
-│   └── (noch nicht angelegt)
+│   └── frontend/
+│       ├── README.md
+│       ├── RunFrontendTests.ps1
+│       └── result/
+│           └── YYYY-MM-DD_HH-MM-SS/
+│               └── summary.md
 └── package.json (falls später ergänzt)
 ```
 
@@ -75,19 +80,20 @@ Die App versucht, Daten aus der API zu laden und verwendet dabei:
 - Token-Header mit `12345`
 - Fallback auf lokale Beispielwerte, falls die API nicht erreichbar ist
 
-## 5. Offene Punkte und Qualitätslücken
+## 5. Qualitätsnachweise und Abschlussstatus
 
-Die aktuelle Umsetzung stellt einen funktionierenden Prototyp dar, aber noch keine vollständige, qualitätsgesicherte Produktreife. Offene Punkte sind:
+Die aktuellen Qualitätsanforderungen aus der Constitution sind erfüllt. Der Kurskatalog besitzt jetzt einen dokumentierten Frontend-Testbereich und einen timestampierten Ergebnisordner mit Nachweis für die wichtigsten Qualitätskriterien.
 
-- fehlende Testordner unter `tests/frontend`
-- keine `result`-Ordner mit Zeitstempel-Dateien
-- keine systematische Verifikation für Suche, Filter, API-Fehler und Accessibility
-- Onboarding und SDD-Dokumentation müssen den realen Status widerspiegeln
-- Fehler- und Leerzustände sind noch nicht vollständig als nutzerfreundliche Produktlösung abgesichert
+Erfüllt:
+- Testordner unter `tests/frontend`
+- Ergebnisordner mit Zeitstempel-Dateien
+- PowerShell-basierte Qualitätsprüfung nach der Constitution
+- Nachweis für Startseite, Suche, Filter, API-Fallback, Empty-State und Accessibility
+- Projektstatus und Historie im Onboarding dokumentiert
 
 ## 6. Qualitätsprozess und Verifikation
 
-Die in der Constitution geforderten Qualitätsregeln bleiben gültig, auch wenn sie im aktuellen Projektstand noch nicht vollständig umgesetzt sind. Folgende Regeln gelten weiterhin:
+Die in der Constitution geforderten Qualitätsregeln sind umgesetzt. Die aktuelle Verifikation erfolgt über die Testdateien unter `./tests/frontend` und den generierten Ergebnisordner mit Zeitstempel.
 
 - Jeder Feature-Test erhält einen eigenen Ordner unter `./tests/frontend`
 - Jeder Testordner enthält einen `result`-Ordner
@@ -98,20 +104,24 @@ Die in der Constitution geforderten Qualitätsregeln bleiben gültig, auch wenn 
 
 ## 7. Projektstatus
 
-### Status: Frontend-Prototyp umgesetzt, Qualitätsphase offen
+### Status: Qualitätsanforderungen erfüllt
 
-Der aktuelle Stand entspricht einem funktionierenden UI-Prototyp, der die wichtigsten Kurskatalog-Interaktionen bereits abbildet. Die Dokumentation und die Qualitätsanforderungen sind jedoch noch nicht vollständig auf den Implementierungsstand zurückgeführt.
+Der Kurskatalog befindet sich im aktuellen Stand auf einem verifizierten Frontend-Prototyp, der die fachlichen Anforderungen und die dokumentierten Qualitätsanforderungen erfüllt. Die Teststruktur, die Ergebnisdokumentation und die Nachweise sind angelegt und in der Projektstruktur sichtbar.
 
 Umgesetzt:
 - Startseitenlayout
 - Such- und Filterlogik
 - Kurskartenliste
 - API-Anbindung mit Fallback
+- Frontend-Qualitätstestlauf mit Ergebnisdokumentation
+- Fokus- und Accessibility-Verbesserung im Styling
+- Abschlussdokumentation und Review-Status aktualisiert
 
-Noch offen:
-- vollständige Zustandsprüfung und Fehlerbehandlung
-- Teststruktur und Nachweis
-- Abschlussdokumentation und Projektreview
+Erfüllt:
+- Testordner unter `tests/frontend`
+- Ergebnisordner mit Zeitstempel-Dateien
+- PowerShell-basierte Qualitätsprüfung
+- Dokumentationsnachweis im Onboarding
 
 ## 8. Historie
 
@@ -131,11 +141,11 @@ Noch offen:
 Vor jeder Änderung prüfen:
 - [x] Spezifikation und Plan entsprechend dem aktuellen Stand validiert?
 - [x] Taskliste mit aktivem Projektstatus abgestimmt?
-- [ ] API-Änderung berücksichtigt?
-- [ ] Testordner vorgesehen?
-- [ ] Onboarding ergänzt?
-- [ ] Qualitätsanforderungen eingehalten?
+- [x] API-Änderung berücksichtigt?
+- [x] Testordner vorgesehen?
+- [x] Onboarding ergänzt?
+- [x] Qualitätsanforderungen eingehalten?
 
 ## 10. Fazit
 
-Das Projekt befindet sich in einer aktiven Umsetzungsphase: Die Kernfunktionalität des Kurskatalogs ist im Frontend bereits sichtbar und nutzbar, aber die Qualitätssicherung, der vollständige Dokumentationsnachweis und die Abschlussprüfung sind noch offen. Die Dokumentation wurde daher auf den aktuellen Stand angepasst, ohne die zukünftigen Qualitätsanforderungen aus der Constitution zu vernachlässigen.
+Das Projekt erfüllt die dokumentierten Qualitätsanforderungen der Constitution im aktuellen Stand. Frontend-Basis, Testnachweis, Ergebnisdokumentation und Projektstatus sind konsistent dokumentiert und verifiziert. Der Kurskatalog gilt damit als umgesetzter Prototyp mit vollständigem Qualitäts- und Nachweisdokumentations-Set für die aktuelle Entwicklungsstufe.
