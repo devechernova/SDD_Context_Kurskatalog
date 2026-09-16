@@ -2,24 +2,24 @@
 
 ## 1. Zweck
 
-Dieses Dokument dokumentiert den Entwicklungsfortschritt, die Projektentscheidungen, die Ausrichtung auf die Spezifikationen und die Qualitätsanforderungen des Kurskatalog-Projekts. Es dient als zentrale Historie für Mitarbeitende und Agenten, damit Wiederholungen, Fehlentscheidungen und unklare Implementierungen vermieden werden.
+Dieses Dokument beschreibt den aktuellen Stand des Kurskatalog-Projekts und dokumentiert die Entscheidungen, den erreichten Fortschritt sowie die noch offenen Qualitäts- und Implementierungsaufgaben. Es dient als zentrale Projektgeschichte und als Referenz für Mitarbeitende und Agenten.
 
 ## 2. Projektkontext
 
-Das Projekt ist ein Kurskatalog für Weiterbildungsangebote. Die Anwendung soll den Nutzerinnen und Nutzern in kurzer Zeit eine übersichtliche Auswahl passender Kurse ermöglichen. Die Umsetzung orientiert sich an einem vorhandenen Mockup und an einer definierten API-Dokumentation.
+Das Projekt ist ein Kurskatalog für Weiterbildungsangebote mit Fokus auf IT, Daten, Projektmanagement, Agile Methoden, Business Analyse, IT-Security und Karriere & Coaching. Die Anwendung orientiert sich an einem vorhandenen Mockup und an der definierten Kurs-API.
 
-## 3. Technischer Rahmen
+## 3. Aktueller technischer Stand
 
-### 3.1 Technologie
-Nach der Constitution gilt für das Projekt:
+### 3.1 Technologien
+Die Umsetzung folgt dem in der Constitution festgelegten Rahmen:
 - JavaScript mit NodeJS
 - HTML und CSS
-- Express
 - CSS-Variablen, Flexbox und Grid
+- Express ist als Server-/Integrationsschicht vorgesehen
 - Tailwind CSS ist erlaubt
-- Frameworks wie React, Vue, Angular, NextJS, Vite und Bootstrap sind nicht erlaubt
+- Frameworks wie React, Vue, Angular, NextJS, Vite und Bootstrap sind nicht Teil der Umsetzung
 
-### 3.2 Projektstruktur
+### 3.2 Aktuell vorhandene Struktur
 
 ```text
 Kurskatalog/
@@ -39,75 +39,98 @@ Kurskatalog/
 │   ├── plan.md
 │   ├── task.md
 │   └── frontend/
-├── tests/
-│   └── frontend/
 ├── src/
+│   ├── index.html
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── app.js
+├── tests/
+│   └── (noch nicht angelegt)
 └── package.json (falls später ergänzt)
 ```
 
-## 4. API- und Datenbasis
+## 4. Bereits umgesetzter Projektstand
 
-Die API-Dokumentation ist die zentrale Grundlage für die Kursdaten. Wichtige Eckpunkte:
-- Basisadresse: `http://localhost:4000`
-- Token gemäß Constitution: `12345`
-- Lesezugriff über `GET /items/courses`
-- Einzeldaten über `GET /items/courses/:id`
-- Filter-, Such- und Sortierparameter als Bestandteil der API-Spezifikation
-- Fehlercodes gemäß API-Contract
+### 4.1 Frontend-Basis
+Die grundlegende Frontend-Ansicht wurde bereits realisiert:
+- Header mit Logo und Navigation
+- Hero-Bereich mit Überschrift, Beschreibung und Suchfeld
+- Filterleiste mit Kategorien
+- Kurskarten mit Bild, Badge, Titel, Kurzbeschreibung, Metadaten und Call-to-Action
+- Responsive Layout mit CSS Grid/Flexbox
+- Ausgabe der Kursliste im sichtbaren Bereich der Startseite
 
-Die Anwendung soll sich an diese Regeln halten und die Daten nur in der Form verarbeiten, die für die Anzeige im Kurskatalog erforderlich ist.
+### 4.2 Interaktion
+Die aktuelle JavaScript-Umsetzung enthält bereits:
+- Suche im Client
+- Filterung nach Kategorien
+- Empty-State bei keinen Treffern
+- Darstellung von Kurskarten
+- API-Ladeversuch mit Fallback-Daten
 
-## 5. Qualitätsprozess
+### 4.3 API-Anbindung
+Die App versucht, Daten aus der API zu laden und verwendet dabei:
+- `GET /items/courses`
+- Token-Header mit `12345`
+- Fallback auf lokale Beispielwerte, falls die API nicht erreichbar ist
 
-Die Constitution definiert zwingende Qualitätsregeln:
+## 5. Offene Punkte und Qualitätslücken
+
+Die aktuelle Umsetzung stellt einen funktionierenden Prototyp dar, aber noch keine vollständige, qualitätsgesicherte Produktreife. Offene Punkte sind:
+
+- fehlende Testordner unter `tests/frontend`
+- keine `result`-Ordner mit Zeitstempel-Dateien
+- keine systematische Verifikation für Suche, Filter, API-Fehler und Accessibility
+- Onboarding und SDD-Dokumentation müssen den realen Status widerspiegeln
+- Fehler- und Leerzustände sind noch nicht vollständig als nutzerfreundliche Produktlösung abgesichert
+
+## 6. Qualitätsprozess und Verifikation
+
+Die in der Constitution geforderten Qualitätsregeln bleiben gültig, auch wenn sie im aktuellen Projektstand noch nicht vollständig umgesetzt sind. Folgende Regeln gelten weiterhin:
 
 - Jeder Feature-Test erhält einen eigenen Ordner unter `./tests/frontend`
 - Jeder Testordner enthält einen `result`-Ordner
-- Testdateien werden mit dem Format `JJJJ-MM-TT_HH-MM-SS` benannt
+- Testdateien werden nach dem Muster `JJJJ-MM-TT_HH-MM-SS` benannt
 - Jede Funktion hat einen eigenen Dokumentations-Eintrag
-- Jede Funktion hat mindestens einen XUnit-Test (nur Batch- und PowerShell-Tests)
-- Änderungen und Entwicklung werden in diesem Onboarding-Dokument festgehalten
-
-## 6. Entwicklungsvorgehen
-
-### 6.1 SDD-Prozess
-1. Spezifikation dokumentieren
-2. Plan erstellen
-3. Aufgaben definieren
-4. Umsetzung mit Review und Tests
-5. Ergebnis dokumentieren und im Onboarding festhalten
-
-### 6.2 Review-Anforderungen
-- Die Spezifikation bleibt die maßgebliche Quelle der Wahrheit
-- Jede Änderung muss dokumentarisch nachvollziehbar sein
-- Die Umsetzung muss die Constitution und API-Spezifikation respektieren
+- Jede Funktion hat mindestens einen Nachweis via XUnit-/Batch-/PowerShell-Test
+- Änderungen werden in diesem Onboarding-Dokument protokolliert
 
 ## 7. Projektstatus
 
-### Status: Dokumentation initialisiert
+### Status: Frontend-Prototyp umgesetzt, Qualitätsphase offen
 
-Die Dokumentationsbasis wurde gemäß den Projektvorgaben aufgestellt:
-- Spezifikation dokumentiert
-- Plan dokumentiert
-- Aufgabenliste dokumentiert
-- Onboarding erstellt
+Der aktuelle Stand entspricht einem funktionierenden UI-Prototyp, der die wichtigsten Kurskatalog-Interaktionen bereits abbildet. Die Dokumentation und die Qualitätsanforderungen sind jedoch noch nicht vollständig auf den Implementierungsstand zurückgeführt.
 
-Noch keine HTML-, CSS- oder JavaScript-Implementierung wurde erstellt. Der Fokus liegt aktuell auf der sauberen Dokumentation und Aufbereitung der Anforderungen.
+Umgesetzt:
+- Startseitenlayout
+- Such- und Filterlogik
+- Kurskartenliste
+- API-Anbindung mit Fallback
+
+Noch offen:
+- vollständige Zustandsprüfung und Fehlerbehandlung
+- Teststruktur und Nachweis
+- Abschlussdokumentation und Projektreview
 
 ## 8. Historie
 
 ### 2026-09-15
-- Einleitung des Kurskatalog-Projekts in der SDD-Struktur
 - Constitution und API-Dokumentation analysiert
-- Spezifikation, Plan und Tasks für das Projekt dokumentiert
-- Onboarding-Dokument ergänzt
+- Spezifikation, Plan und Aufgabenliste dokumentiert
+- Initiales SDD-Setup angelegt
 
-## 9. Checklist für zukünftige Änderungen
+### 2026-09-16
+- Frontend-Prototyp implementiert
+- Kursliste, Suche und Filter umgesetzt
+- API-Anbindung mit Fallback ergänzt
+- Dokumentation auf aktuellen Stand korrigiert
+
+## 9. Checkliste für zukünftige Änderungen
 
 Vor jeder Änderung prüfen:
-- [ ] Spezifikation angepasst?
-- [ ] Plan aktualisiert?
-- [ ] Taskliste überprüft?
+- [x] Spezifikation und Plan entsprechend dem aktuellen Stand validiert?
+- [x] Taskliste mit aktivem Projektstatus abgestimmt?
 - [ ] API-Änderung berücksichtigt?
 - [ ] Testordner vorgesehen?
 - [ ] Onboarding ergänzt?
@@ -115,4 +138,4 @@ Vor jeder Änderung prüfen:
 
 ## 10. Fazit
 
-Das Projekt ist klar auf eine dokumentierte, qualitätsorientierte und API-basierte Umsetzung ausgerichtet. Das Dokumentationsmodell ist damit vorbereitet, damit die eigentliche Implementierung strukturiert, überprüfbar und nachvollziehbar erfolgen kann.
+Das Projekt befindet sich in einer aktiven Umsetzungsphase: Die Kernfunktionalität des Kurskatalogs ist im Frontend bereits sichtbar und nutzbar, aber die Qualitätssicherung, der vollständige Dokumentationsnachweis und die Abschlussprüfung sind noch offen. Die Dokumentation wurde daher auf den aktuellen Stand angepasst, ohne die zukünftigen Qualitätsanforderungen aus der Constitution zu vernachlässigen.
